@@ -8,18 +8,30 @@
     <title>CV</title>
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="relative container mx-auto p-6">
         <!-- Flex container -->
         <div class="flex items-center justify-between">
             <!-- Logo -->
             <div class="pt-2">
-                <a href="./index.html" class="hover:text-red-700">Derek Johnson</a>
+                <p>Derek Johnson</p>
             </div>
             <!-- Menu items -->
             <div class="hidden md:flex space-x-6">
                 <a href="./CV.html" class="hover:text-red-700">CV</a>
                 <a href="#" class="hover:text-red-700">Projects</a>
+            </div>
+            <!-- Hamburger Icon -->
+            <button id="cv-menu-btn" class="block hamburger md:hidden focus:outline-none">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+            <div id="cv-menu" class="absolute flex-col items-center self-end hidden py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                <a href="./CV.html">CV</a>
+                <a href="#">Projects</a>
             </div>
         </div>
     </nav>
@@ -28,5 +40,6 @@
             <object data="./docs/DerekJohnsonResume.pdf" type="application/pdf" style="min-height: 100vh;width:100%"></object>
         </div>
     </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>

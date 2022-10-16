@@ -14,12 +14,12 @@
         <div class="flex items-center justify-between">
             <!-- Logo -->
             <div class="pt-2">
-                <p>Derek Johnson</p>
+                <a href="#" id="homeBtn" class="hover:text-red-700">Derek Johnson</a>
             </div>
             <!-- Menu items -->
             <div class="hidden md:flex space-x-6">
-                <a href="./CV.html" class="hover:text-red-700">CV</a>
-                <a href="#" class="hover:text-red-700">Projects</a>
+                <a href="#" id="CVBtn" class="hover:text-red-700">CV</a>
+                <a href="#" id="projectsBtn" class="hover:text-red-700">Projects</a>
             </div>
             <!-- Hamburger Icon -->
             <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
@@ -31,15 +31,15 @@
         <!-- Mobile Menu -->
         <div class="md:hidden">
             <div id="menu" class="absolute flex-col items-center self-end hidden py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
-                <a href="./CV.html">CV</a>
-                <a href="#">Projects</a>
+                <a href="#" id="CVBtnMobile">CV</a>
+                <a href="#" id="projectsBtnMobile">Projects</a>
             </div>
         </div>
     </nav>
     <!-- Hero Section -->
     <section id="hero">
         <!-- Flex Container -->
-        <div class="container items-center px-6 mx-auto mt-10 space-y-0">
+        <div id="mainContent" class="container items-center px-6 mx-auto mt-10 space-y-0">
             <!-- left item -->
             <div class="flex flex-col items-center mb-32 space-y-12">
                 <h1 class="text-4xl font-bold text-center md:text-5xl">
@@ -48,6 +48,11 @@
                 <p class="text-center text-blue-700">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus inventore reprehenderit, quidem ipsum quam neque animi quaerat id veritatis dolorem accusantium quo qui rerum voluptas unde doloribus accusamus ullam quas.
                 </p>
+            </div>
+        </div>
+        <div id="CVContent" class="hidden container mx-auto p-6">
+            <div class="flex items-center">
+                <object data="./docs/DerekJohnsonResume.pdf" type="application/pdf" style="min-height: 100vh;width:100%"></object>
             </div>
         </div>
     </section>
