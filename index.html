@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Derek Johnson</title>
 </head>
-<body>
+<body class="bg-slate-300">
     <!-- Navbar -->
-    <nav class="relative container mx-auto p-6">
+    <nav class="relative container mx-auto p-6 drop-shadow-lg bg-white">
         <!-- Flex container -->
         <div class="flex items-center justify-between">
             <!-- Logo -->
             <div class="pt-2">
-                <a href="#" id="homeBtn" class="hover:text-red-700">Derek Johnson</a>
+                <a href="#" id="homeBtn" class="text-xl hover:text-blue-700">Derek Johnson</a>
             </div>
             <!-- Menu items -->
             <div class="hidden md:flex space-x-6">
-                <a href="#" id="CVBtn" class="hover:text-red-700">CV</a>
-                <a href="#" id="projectsBtn" class="hover:text-red-700">Projects</a>
+                <a href="#" id="CVBtn" class="text-xl hover:text-blue-700">CV</a>
+                <a href="#" id="projectsBtn" class="text-xl hover:text-blue-700">Projects</a>
             </div>
             <!-- Hamburger Icon -->
             <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
@@ -29,15 +29,16 @@
             </button>
         </div>
         <!-- Mobile Menu -->
+
+    </nav>
+    <!-- Hero Section -->
+    <div class="relative container mx-auto p-6 h-screen backdrop-blur-sm bg-white/30">
         <div class="md:hidden">
-            <div id="menu" class="absolute flex-col items-center self-end hidden py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+            <div id="menu" class="absolute flex-col items-center self-end hidden py-8 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
                 <a href="#" id="CVBtnMobile">CV</a>
                 <a href="#" id="projectsBtnMobile">Projects</a>
             </div>
         </div>
-    </nav>
-    <!-- Hero Section -->
-    <section id="hero">
         <!-- Flex Container -->
         <div id="mainContent" class="container items-center px-6 mx-auto mt-10 space-y-0">
             <!-- left item -->
@@ -55,7 +56,7 @@
                 <object data="./docs/DerekJohnsonResume.pdf" type="application/pdf" style="min-height: 100vh;width:100%"></object>
             </div>
         </div>
-    </section>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>
