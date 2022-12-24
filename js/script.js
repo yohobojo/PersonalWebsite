@@ -1,43 +1,38 @@
 const mainContent = document.getElementById('mainContent');
 const CVContent = document.getElementById('CVContent');
+const projectsContent = document.getElementById('projectsContent');
 
 const homeBtn = document.getElementById('homeBtn');
 const CVBtn = document.getElementById('CVBtn');
-const CVBtnMobile = document.getElementById('CVBtnMobile');
 const projectsBtn = document.getElementById('projectsBtn');
 
 CVBtn.addEventListener('click', () => {
-  if (CVContent.classList.contains('hidden')) {
-    mainContent.classList.toggle('hidden');
-    CVContent.classList.toggle('hidden');
-    CVBtn.classList.toggle('text-blue-700');
+  if (CVContent.classList.contains('d-none')) {
+    mainContent.classList.add('d-none');
+    CVContent.classList.remove('d-none');
+    projectsContent.classList.add('d-none');
+    homeBtn.classList.remove('active');
+    projectsBtn.classList.remove('active');
+    CVBtn.classList.add('active');
   }
 });
-CVBtnMobile.addEventListener('click', () => {
-  if (CVContent.classList.contains('hidden')) {
-    mainContent.classList.toggle('hidden');
-    CVContent.classList.toggle('hidden');
-    CVBtn.classList.toggle('text-blue-700');
+projectsBtn.addEventListener('click', () => {
+  if (projectsContent.classList.contains('d-none')) {
+    mainContent.classList.add('d-none');
+    CVContent.classList.add('d-none');
+    projectsContent.classList.remove('d-none');
+    homeBtn.classList.remove('active');
+    projectsBtn.classList.add('active');
+    CVBtn.classList.remove('active');
   }
 });
 homeBtn.addEventListener('click', () => {
-  if (mainContent.classList.contains('hidden')) {
-    mainContent.classList.toggle('hidden');
-    CVContent.classList.toggle('hidden');
-    CVBtn.classList.toggle('text-blue-700');
+  if (mainContent.classList.contains('d-none')) {
+    mainContent.classList.remove('d-none');
+    CVContent.classList.add('d-none');
+    projectsContent.classList.add('d-none');
+    homeBtn.classList.add('active');
+    projectsBtn.classList.remove('active');
+    CVBtn.classList.remove('active');
   }
-});
-
-const btn = document.getElementById('menu-btn');
-const nav = document.getElementById('menu');
-
-btn.addEventListener('click', () => {
-  btn.classList.toggle('open');
-  nav.classList.toggle('flex');
-  nav.classList.toggle('hidden');
-});
-CVBtnMobile.addEventListener('click', () => {
-  btn.classList.toggle('open');
-  nav.classList.toggle('flex');
-  nav.classList.toggle('hidden');
 });
